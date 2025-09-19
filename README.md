@@ -315,14 +315,8 @@ docker run -p 8000:8000 todo-backend
 ```bash
 cd backend
 
-# 代码格式化
-black .
+uvicorn app.main:app --reload
 
-# 代码风格检查
-flake8 .
-
-# 类型检查
-mypy .
 ```
 
 #### 前端
@@ -331,7 +325,9 @@ mypy .
 cd frontend
 
 # 代码规范检查
-npm run lint
+npm install
+
+npm start
 ```
 
 ### 环境变量
